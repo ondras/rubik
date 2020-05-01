@@ -1,0 +1,37 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+}
+
+body {
+	background-color: #777;
+	color: white;
+	text-shadow: 0px 1px 1px black;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+h1 { 
+	text-align: center;
+	margin-top: 0px;
+	padding-top: 1em;
+}
+
+footer {
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	left: 0px;
+	bottom: 3px;
+	font-size: 90%;
+}
+
+a {
+	color: white;
+}
+
+.face {
+	border: 2px solid black;
+	border-radius: 10px;
+}
