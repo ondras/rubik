@@ -160,7 +160,7 @@ Cube.prototype._update = function() {
 	transform += "translate3d("+(-Face.SIZE/2)+"px, "+(-Face.SIZE/2)+"px, "+(-Face.SIZE/2)+"px) ";
 	if (this._rotation) { transform += this._rotation + " "; }
 
-	var half = Math.floor(Rubik.SIZE/2);
+	var half = Math.floor(Rubik.SIZE/2) - (Rubik.SIZE % 2 === 0 ? 1/2 : 0);
 	var x = this._position[0];
 	var y = this._position[1];
 	var z = -this._position[2];
@@ -445,9 +445,9 @@ Rubik.prototype._finalizeRotation = function(cubes, rotation) {
 	
 	if (rotation[0]) { direction *= -1; } /* FIXME wtf */
 	
-	var half = Math.floor(Rubik.SIZE/2);
-	
-	for (var i=0;i<cubes.length;i++) { 
+	var half = Math.floor(Rubik.SIZE/2) - (Rubik.SIZE % 2 === 0 ? 1/2 : 0);
+
+	for (var i=0;i<cubes.length;i++) {
 		var x = i % Rubik.SIZE - half;
 		var y = Math.floor(i / Rubik.SIZE) - half;
 		
